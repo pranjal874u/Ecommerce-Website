@@ -15,7 +15,14 @@ const App = () => {
         <Route path="/products/:id" element={<Pdp />} />
         <Route path="/category/:url" element={<ProductCategory />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/wishlist"
+          element={
+            <React.Suspense fallback={<div>Loading the wishlist</div>}>
+              <Wishlist />
+            </React.Suspense>
+          }
+        />
       </Routes>
     </ThemeProvider>
   );
