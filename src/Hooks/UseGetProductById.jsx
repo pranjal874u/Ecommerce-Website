@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addProductDataById } from "../App/ProductSlice";
+import { addProductDataById } from "../app/ProductSlice";
 
 const UseGetProductById = (id) => {
   const productDataMap = useSelector((state) => state.product.productDataMap);
